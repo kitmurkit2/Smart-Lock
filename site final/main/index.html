@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pratt - Free Bootstrap 3 Theme">
+    <meta name="author" content="Alvarez.is - BlackTie.co">
+
+    <title>Data Base</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.6/css/bootstrap-modal-bs3patch.css'>
+    
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+    <script src="assets/js/placeholder.js" ></script>
+	
+	
+
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#navigation">
+
+    <!-- Fixed navbar -->
+	    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#"><b>Team STD</b></a>
+	        </div>
+	        <div class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav">
+	            <li class="active"><a href="#	" class="smothscroll">Data Base</a></li>
+	            <li><a href="#"    data-toggle="modal" data-target="#myModal1" >Add</a></li>
+	            <li><a href="#" data-toggle="modal" data-target="#myModal2">Delete</a></li>
+				<li><a href="#" data-toggle="modal" data-target="#myModal3">Update</a></li>
+				<li><a href="#" data-toggle="modal" data-target="#myModal4">Block</a></li>
+				<li><a href="#" data-toggle="modal" data-target="#myModal5">Unblock</a></li>
+				<li><a href="logs.html">Logs</a></li>
+	          </ul>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog ">
+    
+      <!-- Modal content add-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add a new user</h4>
+        </div>
+        <div class="modal-body">
+          <div>
+                 <input type="text" placeholder="name" id ="fn"></input>
+         </div>
+		 <div>
+                 <input type="text" placeholder="last name" id = "ln"></input>
+         </div> 
+		 <div>
+                 <input type="text" placeholder="id" id="in"></input>
+         </div> 
+		 <div>
+                 <input type="text" placeholder="card key" id = "ck" ></input>
+         </div> 
+        </div>
+        <div class="modal-footer">
+		  <button type="submit" class="btn btn-default" OnClick ="add('fn','ln','in','ck');">Submit</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog ">
+    
+      <!-- Modal content--delete-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Choose user you want to delete</h4>
+        </div>
+        <div class="modal-body">
+          <div>
+                 <input type="text" placeholder="ID" id="in2"></input>
+         </div>
+		 
+        </div>
+        <div class="modal-footer">
+		  <button type="submit" class="btn btn-default" OnClick="del('in2');">Submit</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+
+<div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog ">
+    
+      <!-- Modal content update-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">fill in for update</h4>
+        </div>
+        <div class="modal-body">
+          <div>
+                 <input type="text" placeholder="id" id="in3"></input>
+         </div>
+		 <div>
+                 <input type="text" placeholder="first name" id="fn3"></input>
+         </div> 
+		 <div>
+                 <input type="text" placeholder="last name" id="ln3"></input>
+         </div> 
+		 <div>
+                 <input type="text" placeholder="card key" id="ck3"></input>
+         </div> 
+        </div>
+        <div class="modal-footer">
+		  <button type="submit" class="btn btn-default" OnClick="update('in3','fn3','ln3','ck3');">Submit</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+  <div class="modal fade" id="myModal4" role="dialog">
+    <div class="modal-dialog ">
+    
+      <!-- Modal content--block-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Choose user you want to block</h4>
+        </div>
+        <div class="modal-body">
+          <div>
+                 <input type="text" placeholder="ID" id="in4"></input>
+         </div>
+		 
+        </div>
+        <div class="modal-footer">
+		  <button type="submit" class="btn btn-default" OnClick="block('in4');">Submit</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+<div class="modal fade" id="myModal5" role="dialog">
+    <div class="modal-dialog ">
+    
+      <!-- Modal content--unblock-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Choose user you want to unblock</h4>
+        </div>
+        <div class="modal-body">
+          <div>
+                 <input type="text" placeholder="ID" id="in5"></input>
+         </div>
+		 
+        </div>
+        <div class="modal-footer">
+		  <button type="submit" class="btn btn-default" OnClick="unblock('in5');">Submit</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+	<section id="contact" name="contact"></section>
+	<div id="footerwrap">
+		<div class="container">
+			<div class="col-lg-12">
+				<table class="table table-hover table-bordered table-dark" id="data">
+						<tr>
+							<div class="col-4">
+		   					 <td scope="col" id = "headtable">ID</td>
+		    					</div>
+							<div class="col-4">
+							 <td scope="col"  id = "headtable">Card Key</td>
+		  			 		</div>
+								<div class="col-4">
+								<td scope="col" id = "headtable">First Name</td>
+		   					 	</div >
+								<div class="col-4">
+							 <td scope="col" id = "headtable">Last Name</td>
+		   					 </div>
+							<div class="col-4">
+							 <td scope="col"  id = "headtable">Status</td>
+		  			 		</div>
+							<div class="col-4">
+							 <td scope="col"  id = "headtable">Last checked in</td>
+		  			 		</div>
+					 </tr>
+			</div>
+		</div>
+	</div>
+	
+
+
+  
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="assets/js/bootstrap.js"></script>
+	<script>
+	$('.carousel').carousel({
+	  interval: 3500
+	})
+	</script>
+  <div style='text-align: right;position: fixed;z-index:9999999;bottom: 0; width: 100%;cursor: pointer;line-height: 0;display:block !important;'><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_medium=website_stdteam&amp;utm_content=footer_img"><img src="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"  alt="www.000webhost.com"></a></div></body>
+</html>

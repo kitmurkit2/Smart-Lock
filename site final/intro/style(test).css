@@ -1,0 +1,126 @@
+/*
+CSS RESET
+http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License:  none (public domain)
+ */
+html,body,div,span,applet,object,iframe,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+h1{
+	text-align: center;
+	color: white;
+	font-size: 250%;
+}
+ol,ul {
+	list-style: none;
+}
+
+blockquote,q {
+	quotes: none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* Main CSS */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+	font-family: sans-serif;
+	background-color: #2f2f2f;
+}
+/* Bordered form */
+
+label{
+	color: White;
+	margin: 0 40%;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 0 40%;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	text-align: center;
+ 	
+}
+
+/* Set a style for all buttons */
+button {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 0 46.5%;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #228B22;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif; 
+  color: #228B22;
+  transition: .2s ease-in-out;
+}
+button:before {
+  content: "";
+  background: linear-gradient(90deg, rgba(255,255,255,.1), rgba(255,255,255,.5));
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -8px;
+  left: -75px;
+  transform: skewX(-45deg);
+}
+button:hover {
+  background: #228B22;
+  color: #ADFF2F;
+}
+button:hover:before {
+  left: 150px;
+  transition: .5s ease-in-out;
+}
+
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 40px 0 40px 0;
+}
+
+/* Avatar image */
+img.avatar {
+    width: 10%;
+    border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+}
